@@ -10,3 +10,13 @@ def decode_char(str)
     hsh[str]
 end
 puts decode_char('.-')
+
+# decode_word
+def decode_word(str)
+    word = ''
+    collection = str.split
+    collection.each{ |i| word+=decode_char(i) }
+    word
+end
+
+puts decode_word("-- -.--")
